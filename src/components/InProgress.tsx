@@ -1,13 +1,9 @@
 import React from 'react';
 import { Construction, Clock, Rocket } from 'lucide-react';
 
-interface InProgressProps {
-  sectionName: string;
-}
-
-const InProgress: React.FC<InProgressProps> = ({ sectionName }) => {
-  const getSectionDetails = (section: string) => {
-    const sections: Record<string, { title: string; description: string; features: string[]; icon: React.ReactNode }> = {
+const InProgress = ({ sectionName }) => {
+  const getSectionDetails = (section) => {
+    const sections = {
       dashboard: {
         title: 'Dashboard Overview',
         description: 'Get a comprehensive view of your farming activities',
