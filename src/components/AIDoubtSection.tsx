@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MessageCircle, Send, Bot, User, Mic, Image, Paperclip } from 'lucide-react';
 
-const AIDoubtSection: React.FC = () => {
+const AIDoubtSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([
@@ -18,7 +18,7 @@ const AIDoubtSection: React.FC = () => {
 
     const newMessage = {
       id: messages.length + 1,
-      type: 'user' as const,
+      type: 'user',
       content: message,
       timestamp: new Date().toLocaleTimeString()
     };
@@ -36,7 +36,7 @@ const AIDoubtSection: React.FC = () => {
 
       const botResponse = {
         id: messages.length + 2,
-        type: 'bot' as const,
+        type: 'bot',
         content: responses[Math.floor(Math.random() * responses.length)],
         timestamp: new Date().toLocaleTimeString()
       };
