@@ -12,14 +12,7 @@ import {
   Home
 } from 'lucide-react';
 
-interface SidebarProps {
-  activeSection: string;
-  setActiveSection: (section: string) => void;
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOpen, setIsOpen }) => {
+const Sidebar = ({ activeSection, setActiveSection, isOpen, setIsOpen }) => {
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: Home },
     { id: 'lessons', label: 'Lessons & Videos', icon: BookOpen },
@@ -43,7 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
 
       {/* Sidebar */}
       <div className={`
-        fixed lg:static inset-y-0 left-0 z-25 w-80 bg-gradient-to-b from-green-800 via-green-700 to-green-900 
+        fixed lg:static inset-y-0 left-0 z-50 w-80 bg-gradient-to-b from-green-800 via-green-700 to-green-900 
         transform transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         shadow-xl border-r border-green-600/30

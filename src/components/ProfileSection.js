@@ -1,7 +1,7 @@
 import React from 'react';
 import { User, Trophy, Target, Clock, Star } from 'lucide-react';
 
-const ProfileSection: React.FC = () => {
+const ProfileSection = () => {
   const stats = [
     { label: 'Videos Watched', value: '47', icon: Clock, color: 'bg-blue-500' },
     { label: 'Achievements', value: '12', icon: Trophy, color: 'bg-yellow-500' },

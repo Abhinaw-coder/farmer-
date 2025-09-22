@@ -1,31 +1,10 @@
 import React, { useState } from 'react';
 import { Play, Clock, Star, Eye, User, BookOpen, Award } from 'lucide-react';
 
-interface Video {
-  id: number;
-  title: string;
-  description: string;
-  thumbnail: string;
-  duration: string;
-  category: string;
-  level: string;
-  rating: number;
-  views: string;
-  instructor: string;
-  tags: string[];
-  isRecommended: boolean;
-  progress: number;
-}
-
-interface VideoCardProps {
-  video: Video;
-  viewMode: 'grid' | 'list';
-}
-
-const VideoCard: React.FC<VideoCardProps> = ({ video, viewMode }) => {
+const VideoCard = ({ video, viewMode }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const getLevelColor = (level: string) => {
+  const getLevelColor = (level) => {
     switch (level) {
       case 'Beginner': return 'bg-green-100 text-green-800';
       case 'Intermediate': return 'bg-yellow-100 text-yellow-800';

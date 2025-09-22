@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import { Search, Mic, Filter, Sparkles } from 'lucide-react';
 
-interface SearchSectionProps {
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
-  selectedCategory: string;
-  setSelectedCategory: (category: string) => void;
-}
-
-const SearchSection: React.FC<SearchSectionProps> = ({
+const SearchSection = ({
   searchQuery,
   setSearchQuery,
   selectedCategory,

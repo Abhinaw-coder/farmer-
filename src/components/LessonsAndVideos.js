@@ -6,7 +6,7 @@ import VideoGrid from './VideoGrid';
 import AIDoubtSection from './AIDoubtSection';
 import QuizSection from './QuizSection';
 
-const LessonsAndVideos: React.FC = () => {
+const LessonsAndVideos = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 

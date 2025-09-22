@@ -2,13 +2,8 @@ import React, { useState } from 'react';
 import VideoCard from './VideoCard';
 import { Filter, Grid, List } from 'lucide-react';
 
-interface VideoGridProps {
-  searchQuery: string;
-  selectedCategory: string;
-}
-
-const VideoGrid: React.FC<VideoGridProps> = ({ searchQuery, selectedCategory }) => {
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+const VideoGrid = ({ searchQuery, selectedCategory }) => {
+  const [viewMode, setViewMode] = useState('grid');
   
   const videos = [
     {

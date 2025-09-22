@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Brain, Trophy, Play, Star, ChevronRight, Award, Target } from 'lucide-react';
 
-const QuizSection: React.FC = () => {
-  const [selectedQuiz, setSelectedQuiz] = useState<number | null>(null);
+const QuizSection = () => {
+  const [selectedQuiz, setSelectedQuiz] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
 
@@ -67,7 +67,7 @@ const QuizSection: React.FC = () => {
     }
   ];
 
-  const handleStartQuiz = (quizId: number) => {
+  const handleStartQuiz = (quizId) => {
     setSelectedQuiz(quizId);
     setCurrentQuestion(0);
     setScore(0);
@@ -75,7 +75,7 @@ const QuizSection: React.FC = () => {
     setSelectedAnswer(null);
   };
 
-  const handleAnswerSelect = (answerIndex: number) => {
+  const handleAnswerSelect = (answerIndex) => {
     setSelectedAnswer(answerIndex);
   };
 
@@ -99,7 +99,7 @@ const QuizSection: React.FC = () => {
     setSelectedAnswer(null);
   };
 
-  const getDifficultyColor = (difficulty: string) => {
+  const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
       case 'Beginner': return 'bg-green-100 text-green-800';
       case 'Intermediate': return 'bg-yellow-100 text-yellow-800';

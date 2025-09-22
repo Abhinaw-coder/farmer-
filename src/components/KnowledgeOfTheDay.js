@@ -1,7 +1,7 @@
 import React from 'react';
 import { Lightbulb, Calendar, Share2 } from 'lucide-react';
 
-const KnowledgeOfTheDay: React.FC = () => {
+const KnowledgeOfTheDay = () => {
   const knowledge = {
     title: "Optimal Watering Time",
     tip: "Water your crops early morning (6-8 AM) to reduce water evaporation by up to 30% and minimize disease risks. This timing allows plants to absorb water efficiently before the heat of the day.",
